@@ -1,11 +1,22 @@
+import kotlin.system.exitProcess
+
 fun main(args: Array<String>) {
 
-    var powitanie:String = "Hello world"
-    var imie:String = "Michał"
+    print("Wpisz liczbę sekund: ")
+    var getData:String = readLine().toString()
+    var secounds:Int
 
-    var age:Int = Int.MAX_VALUE - Int.MIN_VALUE;
+    try {
+         secounds = getData.toInt();
+    } catch (e: NumberFormatException ) {
+        println("Błędne dane")
+        exitProcess(0);
+    }
 
-    println("Hello $imie masz $age lat")
+    for(i in secounds downTo 0) {
+        println(i)
+        Thread.sleep(1000)
+    }
 
 
 }
