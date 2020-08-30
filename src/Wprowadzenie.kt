@@ -1,22 +1,23 @@
-import kotlin.system.exitProcess
-
 fun main(args: Array<String>) {
 
-    print("Wpisz liczbę sekund: ")
-    var getData:String = readLine().toString()
-    var secounds:Int
 
-    try {
-         secounds = getData.toInt();
-    } catch (e: NumberFormatException ) {
-        println("Błędne dane")
-        exitProcess(0);
-    }
+        var num: Any = 'c'
 
-    for(i in secounds downTo 0) {
-        println(i)
-        Thread.sleep(1000)
-    }
+        when (num) {
+            is Int -> println("Int")
+            is String -> println("String")
+            is Double -> println("Double")
+            is Long -> println("Long")
+            is Char -> println("Char")
+        }
+}
 
+fun getData(message: String): String {
+    println(message)
+    print("> ")
+    return readLine().toString()
+}
 
+fun multiply(x: Double, y: Double): Double {
+    return x * y
 }
