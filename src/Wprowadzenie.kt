@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main(args: Array<String>) {
-    var s: String = "New"
+    var s: String = "Pojep"
     var newS: String
     val arr: MutableList<String> = ArrayList()
     var order: IntArray
